@@ -8,11 +8,6 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
 )
 
-generate_messages(
-   DEPENDENCIES
-   std_msgs
-)
-
 catkin_package(
   INCLUDE_DIRS include
   LIBRARIES hello_world
@@ -32,3 +27,15 @@ target_link_libraries(node1 ${catkin_LIBRARIES})
 add_executable(node2 src/node2.cpp)
 ##add_dependencies(node2 ${PROJECT_NAME}_generate_messages_cpp)
 target_link_libraries(node2 ${catkin_LIBRARIES})
+
+add_executable(node3 src/node3.cpp)
+##add_dependencies(node3 ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(node3 ${catkin_LIBRARIES})
+
+add_executable(node4 src/node4.cpp)
+##add_dependencies(node4 ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(node4 ${catkin_LIBRARIES})
+
+add_executable(node5 src/node5.cpp)
+##add_dependencies(node5 ${PROJECT_NAME}_generate_messages_cpp)
+target_link_libraries(node5 ${catkin_LIBRARIES})
